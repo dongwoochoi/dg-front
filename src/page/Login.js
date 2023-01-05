@@ -19,11 +19,6 @@ import Col from 'react-bootstrap/Col';
 import '../css_page/login.css';
 
 
-
-
-
-
-
 function Login(){
 
     let navigate = useNavigate();
