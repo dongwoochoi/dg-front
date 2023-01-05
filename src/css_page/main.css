@@ -1,0 +1,100 @@
+.main_container > .row{
+    height: 760px;
+    overflow:hidden;
+}
+
+.main_container > .row:first-child{
+    background-color: #FBF7F2;
+}
+
+.main_container > .row:nth-child(2){
+    background-color: white;
+}
+
+.main_container > .row:nth-child(3){
+    background-color: #E6F3E6;
+}
+
+.main_container > .row:nth-child(4){
+    background-color: white;
+}
+.main_container > .row:nth-child(n) >.item{
+    position: relative;
+}
+.main_container > .row:nth-child(n) >.item > .img_item{
+    position:relative;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main_container > .row:nth-child(1) >.item > .img_item{
+    float: right;
+    height: 685px;
+    width: 804px;
+    background-size: 804px;
+    background-image: url("../img/1.png");
+}
+
+.main_container > .row:nth-child(2) >.item > .img_item{
+    float: left;
+    margin-left: 15rem;
+    height: 684px;
+    width: 532px;
+    background-size: 632px;
+    background-image: url("../img/2.png");
+}
+
+.main_container > .row:nth-child(3) >.item > .img_item{
+    float: right;
+    height: 740px;
+    width: 546px;
+    background-size: 620px;
+    background-image: url("../img/3.png");
+}
+
+.main_container > .row:nth-child(4) >.item > .img_item{
+    float: left;
+    height: 735px;
+    width: 526px;
+    background-size: 650px;
+    background-image: url("../img/4.png");
+}
+
+.main_container > .row:nth-child(1) >.item > .text_item{
+    float: left;
+    position: relative;
+    margin-top: 300px;
+    margin-left: 300px;
+}
+
+.main_container > .row:nth-child(2) >.item > .text_item{
+    float: right;
+    position: relative;
+    margin-top: 300px;
+    margin-right: 200px;
+}
+
+.main_container > .row:nth-child(3) >.item > .text_item{
+    float: left;
+    position: relative;
+    margin-top: 300px;
+    margin-left: 300px;
+}
+
+.main_container > .row:nth-child(4) >.item > .text_item{
+    float: left;
+    position: relative;
+    margin-top: 300px;
+    margin-left: 300px;
+    margin-right: 10rem;
+}
+
+.main_container > .row:nth-child(n) >.item > .text_item > h1{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.main_container > .row:nth-child(n) >.item > .text_item > p{
+    margin-top: 3rem;
+    font-size: 1.3rem;
+}
