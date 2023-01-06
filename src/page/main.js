@@ -1,5 +1,6 @@
 //local page import
 import Login from './Login';
+import Navvv from './nav';
 
 //bootstrap import
 import Container from 'react-bootstrap/Container';
@@ -19,7 +20,8 @@ function Main(){
     let navigate = useNavigate();
 
     return (
-        <div>
+        <div className='main_main'>
+            <Navvv/>
             <Routes>
                 <Route path='/login' element={<Login/>} />
             </Routes>

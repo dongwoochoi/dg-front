@@ -1,5 +1,6 @@
 //Local page import
 import Deal from './Deal';
+import Signup from './signup';
 
 //app import
 import { useState } from 'react'; 
@@ -26,15 +27,16 @@ function Login(){
     const [cookies, setCookie] = useCookies(['id']);
 
     return( 
-        <div>
+        <div className='login_main'>
             <Routes>
                 <Route path='/deal' element={<Deal/>} />
+                <Route path='/signup' element={<Signup/>} />
             </Routes>
             <Container className="panel">
-                <Form>
-                    <Form.Group as={Row} className="mb-3">
+                <Form className='c2'>
+                    <Form.Group as={Row} className="mm">
                         <Col sm>
-                            <Form.Control type="text" placeholder="Phone Number" onChange={(e)=>{
+                            <Form.Control className='phone_input' type="text" placeholder="전화번호로 로그인 하기" onChange={(e)=>{
                                 get_phone_number(e.target.value)
                             }} />
                         </Col>
@@ -43,7 +45,7 @@ function Login(){
 
                     <div className="d-grid gap-1">
                         <Button variant="secondary"  onClick={()=>{ 
-                             fetch('http://20.196.193.2:8080/auth/login', {
+                            fetch('http://20.196.193.2:8080/auth/login', {
                                 method : "POST",
                                 headers : {
                                     'Content-Type' : 'application/json'
@@ -69,8 +71,15 @@ function Login(){
                                 ])
                             })
                         }}>
-                            Sign In
+                            로그인
                         </Button>
+                        <div className="d-grid gap-1">
+                            <Button variant="secondary"  onClick={()=>{ 
+                                navigate('/signup')
+                            }}>
+                                회원가입
+                            </Button>
+                        </div>
                     </div>
                 </Form>
             </Container>

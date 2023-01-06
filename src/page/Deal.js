@@ -2,12 +2,14 @@
 //bootstrap import
 //app import
 //style import
+import Navvv from './nav';
 import '../css_page/deal.css';
 
 
 function Deal(){
     return (
-        <div>
+        <div className='main_main'>
+            <Navvv/>
             deal
         </div>
     );

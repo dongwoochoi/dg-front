@@ -2,10 +2,13 @@
 //bootstrap import
 //app import
 //style import
+import Navvv from './nav';
+
 
 function Partime(){
     return (
-        <div>
+        <div className='main_main'>
+            <Navvv/>
             Partime
         </div>
     );
