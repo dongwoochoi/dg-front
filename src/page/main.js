@@ -1,6 +1,7 @@
 //local page import
 import Login from './Login';
 import Navvv from './nav';
+import LoginCheck from '../action/LoginCheck';
 
 //bootstrap import
 import Container from 'react-bootstrap/Container';

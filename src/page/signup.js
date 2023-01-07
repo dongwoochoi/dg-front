@@ -2,6 +2,8 @@
 import PopupPostCode from '../PopupPostCode';
 import React from 'react';
 import PopupDom from '../PopupDom';
+import Loading from '../action/Loding';
+import Signup_end from './signup_end';
 
 //app import
 import { useState } from 'react'; 
@@ -22,6 +24,7 @@ import Test from '../Test';
 import '../css_page/signup.css';
 
 function Signup(){
+    const [loading, setLoading] = useState(false);
     const [cookies, setCookie] = useCookies(['id']);
     let[location, get_location] = useState('');
     let[singup_phone_number, input_phone_number] = useState('');
@@ -46,11 +49,13 @@ function Signup(){
     
     
     return (
-        <div>
+        <div id="signup_main">
+            {loading ? <Loading /> : null}
             <Routes>
                 <Route path='/popup' element={<Test/>} />
+                <Route path='/signup_end' element={<Signup_end/>} />
             </Routes>
-            <Form>
+            <Form className='fform'>
                     <Form.Group as={Row} className="mb-3">
                         <Col sm>
                             <Form.Control type="text" placeholder="핸드폰 번호" onChange={(e)=>{
@@ -84,6 +89,7 @@ function Signup(){
 
                     <div className="d-grid gap-1">
                         <Button variant="secondary"  onClick={()=>{ 
+                            setLoading(true);
                             fetch('http://20.196.193.2:8080/auth/signup', {
                                 method : "POST",
                                 headers : {
@@ -102,10 +108,12 @@ function Signup(){
                                 .then(data=>{
                                     if(statusCode === 409){
                                         alert(data.message)
+                                        setLoading(false);
                                     }
                                     else if(statusCode===201){
                                         setCookie('id', data.token);
-                                        navigate('/login')
+                                        navigate('/signup_end')
+                                        setLoading(false);
                                     }                                  
                                 }).catch(err=>[
                                     console.log(err)

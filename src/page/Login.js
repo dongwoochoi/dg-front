@@ -33,6 +33,7 @@ function Login(){
                 <Route path='/signup' element={<Signup/>} />
             </Routes>
             <Container className="panel">
+                <h2>🥕 로그인을 해주세요.</h2>
                 <Form className='c2'>
                     <Form.Group as={Row} className="mm">
                         <Col sm>
@@ -64,8 +65,12 @@ function Login(){
                                     }
                                     else if(statusCode===200){
                                         setCookie('id', data.token);
-                                        navigate('/deal')
-                                    }                                  
+                                        navigate('/main')
+                                        console.log(cookies)
+                                    }              
+                                    else{
+                                        alert("??")
+                                    }                    
                                 }).catch(err=>[
                                     console.log(err)
                                 ])

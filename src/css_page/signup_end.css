@@ -1,0 +1,28 @@
+#next_signup{
+    background-image: url('../img/trust.png');
+    height: 300px;
+	background-size: cover;
+    background-position: center;
+    height :100vh;
+    overflow: hidden !important;
+}
+
+#next_signup > .container > h2{
+    position: absolute;
+    top : 7%;
+    left : 39%;
+}
+
+#next_signup > .container > .button_div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#next_signup > .container > .button_div > button{
+    margin-left: 48px;
+    background-color: antiquewhite;
+    border: 1px solid antiquewhite;
+    color : black;
+}

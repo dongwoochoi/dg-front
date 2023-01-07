@@ -27,7 +27,7 @@ function Navvv(){
                                     justify_content: "flex-start",
                                     max_width: "2007px",
                                     margin_left: "7rem",
-                                    margin_right: "7rem",
+                                    margin_right: "7rem",            
                                     padding: "0px"
                     }}>
                 <Navbar.Brand href="#home">

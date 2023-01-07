@@ -10,15 +10,31 @@
 }
 
 .login_main > .panel{
+    background-color: white;
+    width : 500px;
+    height: auto;
     position: absolute;
-    top: 55%;
-    left: 87%;
+    top: 60%;
+    left: 50%;
     transform: translate(-50%, -50%);
+    border: 1px solid #b0b0b0;
+    border-radius: 5px;
+}
+
+h2{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .phone_input{
     width: 300px;
     margin : 0 !important;
+}
+
+.c2{
+    left : 50%;
+    transform: translate(20%, 0%);
+    margin-bottom: 1.5rem;
 }
 
 button{
