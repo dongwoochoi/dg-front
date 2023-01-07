@@ -4,13 +4,17 @@
 //style import
 import Navvv from './nav';
 import '../css_page/deal.css';
+import Deal_poster from './deal_poster';
 
 
 function Deal(){
     return (
-        <div className='main_main'>
+        <div className='deal_main'>
             <Navvv/>
-            deal
+            <div className='deal_container'>
+                <p>인기 중고 매물</p>
+                <Deal_poster/>
+            </div>
         </div>
     );
 }

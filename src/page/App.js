@@ -7,6 +7,7 @@ import Signup  from './signup';
 import Test from '../Test';
 import Signup_end from './signup_end';
 import LoginCheck from '../action/LoginCheck';
+import deal_poster from './deal_poster';
 
 
 //bootstrap import
@@ -30,6 +31,7 @@ function App() {
   return (
     <div id="main" className="App">
       <Routes>
+      <Route path='/' element={<Main/>} />
         <Route path='/signup_end' element={<Signup_end/>} />
         <Route path='/main' element={<Main/>} />
         <Route path='/deal' element={<Deal/>} />
@@ -39,6 +41,7 @@ function App() {
         <Route path='/signup' element={<Signup/>} />
         <Route path='/popup' element={<Test/>} />
         <Route path='/LoginCheck' element={<LoginCheck/>} />
+        <Route path='/deal_poster' element={<deal_poster/>} />
       </Routes>
 
       <footer className="py-3 my-4">
