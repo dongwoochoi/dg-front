@@ -1,0 +1,145 @@
+#img img
+{
+    border-radius: 2%;
+}
+
+#profile #profile_img img
+{
+    border-radius: 70%;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+#profile #nickname p
+{
+    margin-top: 0;
+    font-size: 12px;
+}
+
+#profile #nickname h2
+{
+    margin-bottom: 0;
+    margin-top: 20px;
+    font-size: 15px;
+}
+#profile
+{
+    display: grid;
+    grid-template-columns: 60px 200px 1fr;
+    border-bottom: 1px solid gray;
+}
+#expression
+{
+    display: grid;
+    grid-template-columns: 60px 40px;
+    justify-content: right;
+    margin-top: 10px;
+}
+#expression p
+{
+    margin: 0;
+}
+#temp #temp_text
+{
+    text-align: right;
+    margin-bottom: 0;
+}
+#main_text #title
+{
+    font-size: 12px;
+}
+#profile #temp #temp_text
+{
+    margin-top: 0;
+    font-size: 10px;
+    color: gray;
+}
+#main_text #price
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+#main_text #tag
+{
+    color: gray;
+    font-size: 12px;
+}
+
+#main_text #text
+{
+    font-size: 15px;
+}
+
+body
+{
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 0;
+}
+#main_text #popularity
+{
+    font-size: 12px;
+    color: gray;
+    padding-bottom: 30px;
+    
+}
+
+#final #love p
+{
+    font-size: 30px;
+    border-right: 1px solid gray;
+    color: gray;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#final
+{
+    display: grid;
+    grid-template-columns: 60px 200px 1fr;
+    border-top: 1px solid gray;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+}
+
+#final #final_price
+{
+    padding-left: 10px;
+    padding-top: 10px;
+   
+}
+#final #final_price #won
+{
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#final #final_price #suggest
+{
+    margin-top: 0;
+    color: gray;
+}
+#final #chat input
+{
+    margin-top: 10px;
+    width: 100px;
+    height: 50px;
+    background-color: orange;
+    border-radius: 10%;
+    border-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+#final #chat
+{
+    text-align: right;
+}
+
+#final
+{
+    position: sticky;
+}

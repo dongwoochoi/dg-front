@@ -8,7 +8,8 @@ import Test from '../Test';
 import Signup_end from './signup_end';
 import LoginCheck from '../action/LoginCheck';
 import deal_poster from './deal_poster';
-
+import { Cookies, useCookies } from 'react-cookie';
+import ProductPage from './detail_page/ProductPage';
 
 //bootstrap import
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,7 +19,6 @@ import Form from 'react-bootstrap/Form';
 //app import
 import {Navbar, Container, Nav } from 'react-bootstrap';
 import {Route, Routes, useNavigate} from 'react-router-dom';
-import { CookiesProvider } from 'react-cookie';
 
 //style import
 import '../App.css';
@@ -27,11 +27,12 @@ import '../App.css';
 function App() {
 
   let navigate = useNavigate();
-
+  
   return (
     <div id="main" className="App">
       <Routes>
-      <Route path='/' element={<Main/>} />
+        <Route path='/' element={<Main/>} />
+        <Route path='/ProductPage' element={<ProductPage/>} />
         <Route path='/signup_end' element={<Signup_end/>} />
         <Route path='/main' element={<Main/>} />
         <Route path='/deal' element={<Deal/>} />

@@ -37,6 +37,6 @@ h2{
     margin-bottom: 1.5rem;
 }
 
-button{
+.login_main > button{
     width: 300px;
 }

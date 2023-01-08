@@ -1,22 +1,25 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-function Deal_poster(){
+function Dealposter(props){
     return(
         <div className='card_post'>
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src="holder.js/100px180" />
                 <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
+                    <Card.Title>{props.post_data.title}</Card.Title>
                     <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+
+                        {props.post_data.content}<br/>
+                        {props.post_data.location}
+
+
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    {/* <Button variant="primary">Go somewhere</Button> */}
                 </Card.Body>
             </Card>
         </div>
     );
 }
 
-export default Deal_poster;
+export default Dealposter;

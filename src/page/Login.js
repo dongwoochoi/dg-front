@@ -4,8 +4,7 @@ import Signup from './signup';
 
 //app import
 import { useState } from 'react'; 
-import { useCookies } from 'react-cookie';
-import axios from 'axios'
+import { Cookies } from 'react-cookie';
 import {Route, Routes, useNavigate} from 'react-router-dom';
 
 //bootstrap import
@@ -24,7 +23,9 @@ function Login(){
 
     let navigate = useNavigate();
     let[phone_number, get_phone_number] = useState('');
-    const [cookies, setCookie] = useCookies(['id']);
+    // const [cookies, setCookie] = useCookies(['id']);
+    
+    const cookies = new Cookies()
 
     return( 
         <div className='login_main'>
@@ -33,7 +34,6 @@ function Login(){
                 <Route path='/signup' element={<Signup/>} />
             </Routes>
             <Container className="panel">
-                <h2>🥕 로그인을 해주세요.</h2>
                 <Form className='c2'>
                     <Form.Group as={Row} className="mm">
                         <Col sm>
@@ -58,19 +58,18 @@ function Login(){
                             .then(res=>{
                                 // console.log(phone_number)
                                 const statusCode = res.status
-                                const response = res.json()
+                                res.json()
                                 .then(data=>{
                                     if(statusCode === 401){
                                         alert(data.message)
                                     }
                                     else if(statusCode===200){
-                                        setCookie('id', data.token);
-                                        navigate('/main')
-                                        console.log(cookies)
-                                    }              
-                                    else{
-                                        alert("??")
-                                    }                    
+                                        cookies.set('id', data.token, { maxAge:3600 })
+                                        console.log(cookies.get('id'))
+                                        localStorage.setItem('cookie', JSON.stringify({token: data.token}));
+                                        // setCookie('id', data.token);
+                                        navigate('/deal')
+                                    }                                  
                                 }).catch(err=>[
                                     console.log(err)
                                 ])
