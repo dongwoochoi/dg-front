@@ -10,15 +10,19 @@
 }
 
 .login_main > .panel{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.666);
     width : 500px;
-    height: auto;
+    height: 500px;
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: 1px solid #b0b0b0;
-    border-radius: 5px;
+    border-radius: 30px;
+}
+
+.login_main > .panel > h2{
+    margin-top: 2rem;
 }
 
 h2{
@@ -32,9 +36,12 @@ h2{
 }
 
 .c2{
+    margin-top: 3rem;
+    position: inherit;
     left : 50%;
-    transform: translate(20%, 0%);
-    margin-bottom: 1.5rem;
+    top : 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 1rem;
 }
 
 .login_main > button{

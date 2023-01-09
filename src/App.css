@@ -15,6 +15,12 @@
   padding: 0px;
 }
 
+#search_button{
+  background-color: rgb(232, 130, 41) !important;
+  border : 3px solid rgb(232, 130, 41); 
+  font-size: 1.2rem;
+}
+
 #main .main_main .container {
   display: flex;
   flex-direction: row;
@@ -65,8 +71,9 @@ div.mb-3 > button{
 }
 
 .login_button{
+  margin-left: 1.5rem;
   margin-top: 5rem;
-  width: 9rem;
+  width: 9rem !important;
   height: 4rem;
   font-size: 1.2rem !important;
 }

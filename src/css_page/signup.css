@@ -7,14 +7,45 @@
     overflow: hidden !important;
 }
 
-#signup_main > .fform{
+#signup_main > .panel{
+    background-color: rgba(255, 255, 255, 0.666);
+    width : 500px;
+    height: 500px;
     position: absolute;
-    top : 45%;
-    left : 50%;
-    transform: translate(-50%, 0%);
-    width: 500px;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #b0b0b0;
+    border-radius: 30px;
 }
 
-#locatino_form{
+#signup_main > .panel > h2{
+    margin-top: 2rem;
+}
+
+h2{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#signup_main .form-control{
+    width: 300px;
+    margin : 0 !important;
+}
+
+.fform{
+    margin-top: 3rem;
+    position: inherit;
+    left : 75%;
+    top : 50%;
+    transform: translate(-50%, -50%);
     margin-bottom: 1rem;
+}
+
+#su{
+    width: 300px;
+}
+
+.popup_post_type2{
+    border: 3px solid rgb(233, 0, 0);
 }

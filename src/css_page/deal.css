@@ -1,0 +1,45 @@
+.deal_main{
+    margin-top : 1%;
+    margin-left : 28%;
+
+}
+
+.xpenfl{
+    align-items: center;
+    padding:40px;
+}
+
+.deal_main > p{
+    position: relative;
+    left: -10%;
+}
+
+.deal_container{
+    border : 1px solid rgb(195, 195, 195);
+    border-radius: 5px;
+    width: 800px !important;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 32px;
+}
+
+.deal_container > .ll{
+    padding : 5px;
+}
+
+.dealdeal > .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    max-width: 2007px;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    padding: 0px;
+}
+
+.new_button{
+
+    position: fixed;
+    left: 80%;
+    border-radius: 50px;
+}

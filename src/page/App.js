@@ -10,7 +10,8 @@ import LoginCheck from '../action/LoginCheck';
 import deal_poster from './deal_poster';
 import { Cookies, useCookies } from 'react-cookie';
 import ProductPage from './detail_page/ProductPage';
-
+import Search_deal from './search_deal';
+import New_post from './new_post';
 //bootstrap import
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
@@ -27,10 +28,11 @@ import '../App.css';
 function App() {
 
   let navigate = useNavigate();
-  
   return (
     <div id="main" className="App">
       <Routes>
+        <Route path='/new_post' element={<New_post/>} />
+        <Route path='/search_deal' element={<Search_deal/>} />
         <Route path='/' element={<Main/>} />
         <Route path='/ProductPage' element={<ProductPage/>} />
         <Route path='/signup_end' element={<Signup_end/>} />

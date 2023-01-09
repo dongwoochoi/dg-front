@@ -4,12 +4,13 @@ import React from 'react';
 import PopupDom from '../PopupDom';
 import Loading from '../action/Loding';
 import Signup_end from './signup_end';
+import Navvv from './nav';
 
 //app import
 import { useState } from 'react'; 
 import {Route, Routes, useNavigate} from 'react-router-dom';
 import { useCookies } from 'react-cookie';
-
+import Container from 'react-bootstrap/Container';
 
 //bootstrap import
 
@@ -50,12 +51,15 @@ function Signup(){
     
     return (
         <div id="signup_main">
+            <Navvv/>
             {loading ? <Loading /> : null}
             <Routes>
                 <Route path='/popup' element={<Test/>} />
                 <Route path='/signup_end' element={<Signup_end/>} />
             </Routes>
-            <Form className='fform'>
+            <Container className="panel">
+                <h2>🥕 회원가입을 해주세요.🥕</h2>
+                <Form className='fform'>
                     <Form.Group as={Row} className="mb-3">
                         <Col sm>
                             <Form.Control type="text" placeholder="핸드폰 번호" onChange={(e)=>{
@@ -88,7 +92,7 @@ function Signup(){
                     <br/>
 
                     <div className="d-grid gap-1">
-                        <Button variant="secondary"  onClick={()=>{ 
+                        <Button id="su" variant="secondary"  onClick={()=>{ 
                             setLoading(true);
                             fetch('http://20.196.193.2:8080/auth/signup', {
                                 method : "POST",
@@ -120,10 +124,11 @@ function Signup(){
                                 ])
                             })
                         }}>
-                            제출
-                        </Button>
-                    </div>
-                </Form>
+                        제출    
+                    </Button>
+                </div>
+            </Form>
+            </Container>
         </div>
     );
 }

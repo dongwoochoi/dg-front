@@ -1,6 +1,7 @@
 //Local page import
 import Deal from './Deal';
 import Signup from './signup';
+import Navvv from './nav';
 
 //app import
 import { useState } from 'react'; 
@@ -29,12 +30,14 @@ function Login(){
 
     return( 
         <div className='login_main'>
+            <Navvv/>
             <Routes>
                 <Route path='/deal' element={<Deal/>} />
                 <Route path='/signup' element={<Signup/>} />
             </Routes>
             <Container className="panel">
-                <Form className='c2'>
+                <h2>🥕 로그인을 해주세요.🥕</h2>
+                <Form className='c2'>    
                     <Form.Group as={Row} className="mm">
                         <Col sm>
                             <Form.Control className='phone_input' type="text" placeholder="전화번호로 로그인 하기" onChange={(e)=>{

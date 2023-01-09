@@ -76,7 +76,7 @@ function Main(){
                         </div>
                     </Col>
                 </Row>
-                <Button className="login_button" variant="dark" onClick={()=>{ navigate('/login') }} >로그인 하기</Button>
+                
             </Container>
         </div>
     );
