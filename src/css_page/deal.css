@@ -38,8 +38,11 @@
 }
 
 .new_button{
-
+    width: 200px;
+    height: 50px;
+    font-size: 1.5rem;
     position: fixed;
+    top : 80%;
     left: 80%;
     border-radius: 50px;
 }

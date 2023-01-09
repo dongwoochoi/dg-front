@@ -9,6 +9,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {useNavigate} from 'react-router-dom';
 
+
 function New_post(){
     let navigate = useNavigate()
     const cookies = new Cookies()
@@ -19,33 +20,17 @@ function New_post(){
     const [input_data2, set_input_data2] = useState();
     const [input_data3, set_input_data3] = useState();
     const [input_data4, set_input_data4] = useState();
-    const [zz, zzz] = useState();
+
     const saveFileImage = (e) => {
       setFileImage(URL.createObjectURL(e.target.files[0]));
-      set_input_data1(fileImage)
     };
-
-   
   
     // 파일 삭제
     const deleteFileImage = () => {
       URL.revokeObjectURL(fileImage);
       setFileImage("");
     };
-
-    const onHandlePost = () => {
-        const newp = new FormData();
-        newp.append("image", input_data1);
-
-        let jsonData = JSON.stringify({
-            title : input_data2,
-            content : input_data3,
-            price : input_data4,
-            });
-
-        newp.append("newpostdata", jsonData);
-        zzz(newp);
-    }
+  
     return(
         <div id='new_post'>
             <Navvv/>
@@ -119,36 +104,40 @@ function New_post(){
                     console.log(input_data3)
                     console.log(input_data4)
                     console.log(fileImage)
-                    fetch('http://20.196.193.2:8080/content/create', zz,{
+                    fetch('http://20.196.193.2:8080/content/create', {
                         method : "POST",
                         headers : {
                             Authorization : cookies.get('id'),
-                            // 'Content-Type' : 'application/json'
-                        }
-                        // body:{
-                        //     image : zz.image,
-                        //     newpostdata : zz.newpostdata
-                        // }
+                            'Content-Type' : 'application/json'
+                        },
+                        body:JSON.stringify({
+                            newpostdata:{
+                                title : input_data2,
+                                content : input_data3,
+                                price : input_data4
+                            }
+
+                        })
                     })
                     .then(res=>{
+
                         // console.log(phone_number)
                         const statusCode = res.status
                         res.json()
                         .then(data=>{
-                            console.log(zz)
                             if(statusCode === 401){
                                 alert(data.message)
                             }
                             else if(statusCode===201){
-                                alert(statusCode.message)
-                                // setCookie('id', data.token);
-                                navigate('/deal')
+                                alert('게시글이 정상적으로 등록되었습니다.')
+
                             }                                  
                         }).catch(err=>[
-                            console.log(err)
+                            console.log(err),
+                            navigate('/deal')
                         ])
                     })
-                }} variant="primary" type="submit">
+                }} variant="primary">
                     Submit
                 </Button>
                 </Form>

@@ -5,7 +5,7 @@ function Dealposter(props){
     return(
         <div className='card_post'>
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Img variant="top" src="https://www.itworld.co.kr/files/itworld/ITW_202112_01/ipad-9th-gen-bezels.jpg" />
                 <Card.Body>
                     <Card.Title>{props.post_data.title}</Card.Title>
                     <Card.Text>

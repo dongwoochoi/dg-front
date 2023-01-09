@@ -6,6 +6,7 @@
 #nav {
   background-color: azure;
   height: 64px;
+  overflow: hidden;
 }
 
 #nav_main .container {
@@ -76,4 +77,9 @@ div.mb-3 > button{
   width: 9rem !important;
   height: 4rem;
   font-size: 1.2rem !important;
+}
+
+.orange{
+  width: 130px !important;
+  height: 50px !important;
 }

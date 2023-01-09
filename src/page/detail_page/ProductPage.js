@@ -53,7 +53,7 @@ function ProductPage(){
                 <Navvv/>
                 <div id="detail">
                     <div id='img'>
-                        {/* <img style={imgStyle} src={productImage}/> */}
+                        <img style={imgStyle} src={'http://20.196.193.2:8080/'+ post_data.contents.img}/>
                     </div>
                     
                     <div id="profile">
@@ -75,6 +75,7 @@ function ProductPage(){
                     <div id="main_text">
                         <div id="title">
                             <h1>{post_data.contents.title}</h1>
+                            {console.log(post_data)}
                         </div>
                         <div id="tag">
                             <p>{post_data.contents.tag} ∙ {post_data.contents.time.createdTime}</p>
