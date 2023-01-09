@@ -1,0 +1,8 @@
+.drop > .dropdown > button{
+    position: absolute;
+    left: 10%;
+}
+
+.drop{
+    margin-top: 10px;
+}

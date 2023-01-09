@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Navvv from '../nav';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import '../../css_page/ProductPage.css'
 
 const cookies = new Cookies()
 // { profileImage, productImage, userName, address, mannerTemp, mannerIcon, kategorie, detailKategorie, title, mainText, price, postedTime, visits, interest, chatting}
@@ -52,7 +53,22 @@ function ProductPage(){
     if (typeof post_data === "object"){
         return (
             <div>
+                
                 <Navvv/>
+                <div className='drop'>
+                    <Dropdown>
+                        <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
+                        Dropdown Button
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu variant="dark">
+                        <Dropdown.Item href="#/action-2">게시글 수정</Dropdown.Item>
+                        <Dropdown.Item href="#/action-3">게시글 삭제</Dropdown.Item>
+                        <Dropdown.Divider />
+                        <Dropdown.Item href="#/action-4">동내 범위 설정 </Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </div>
                 <div id='img'>
                     <img style={imgStyle} src={'http://20.196.193.2:8080/'+ post_data.contents.img}/>
                 </div>
