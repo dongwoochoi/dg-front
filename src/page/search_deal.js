@@ -9,6 +9,7 @@ import Login from './Login';
 import { useDispatch,useSelector } from 'react-redux';
 import { changeData } from '../action/store';
 import Button from 'react-bootstrap/Button';
+import '../css_page/search_deal.css'
 
 
 
@@ -23,7 +24,7 @@ function Search_deal(){
     if (cookies){
         if (typeof post_data === "object"){
             return (
-                <div className='deal_main'>
+                <div className='search_deal_main'>
                     <Navvv/>
                     <div className='deal_container'>
                         <p>검색 결과</p>

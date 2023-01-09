@@ -52,7 +52,15 @@ function Navvv(){
                     </div>
                 </Navbar.Brand>
                 <Nav>
-                    <Nav.Link className='orange' onClick={()=>{ navigate('/deal') }}>중고거래</Nav.Link>
+                    <Nav.Link className='orange' onClick={()=>{ 
+                        if (cookies){
+                            navigate('/deal') 
+                        }
+                        else{
+                            navigate('login') 
+                        }
+                        
+                        }}>중고거래</Nav.Link>
                     <Nav.Link onClick={()=>{ navigate('/partime') }}>알바</Nav.Link>
                 </Nav>
                 </Container>

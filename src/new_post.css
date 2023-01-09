@@ -1,0 +1,35 @@
+.new_post{
+
+}
+
+.ess{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 200px;
+    margin-left: 650px;
+    margin-bottom: 200px;
+    width: 700px;
+    border : 1px solid black;
+    border-radius: 5px;
+}
+
+.ess > div {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ess > div:nth-child(0) > input{
+    width:500px;
+}
+
+.ess > div:nth-child(1) > input{
+    width:600px;
+    height: 128px;
+}
+
+.ess > div:nth-child(2) > input{
+
+}

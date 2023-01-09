@@ -54,6 +54,9 @@ function Deal(){
                     <p>인기 중고 매물</p>
                         <div className='deal_container'>    
                             {
+                                console.log(post_data)
+                            }
+                            {
                                 post_data.map(function(aa, i){
                                     return(
                                         // console.log(aa.title)
@@ -83,7 +86,7 @@ function Deal(){
         return(
             <div>
                 {
-                    navigate("/Login")
+                    navigate("/login")
                 }
             </div>
         );
