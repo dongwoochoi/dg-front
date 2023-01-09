@@ -86,6 +86,7 @@ function New_post(){
                                 alert(data.message)
                             }
                             else if(statusCode===201){
+                                navigate('/deal')
                                 alert('게시글이 정상적으로 등록되었습니다.')
 
                             }                                  
